@@ -3,8 +3,8 @@ permalink: pretty
 markdown: rdiscount
 prose:
   rooturl: '_posts'
-  siteurl: 'http://github.com/jenesis/starter/'
-  relativeLinks: 'http://github.com/jenesis/starter/links.jsonp'
+  siteurl: 'http://github.io/jenesis/starter/'
+  relativeLinks: 'http://github.io/jenesis/starter/links.jsonp'
   media: 'media'
   metadata:
     _posts:
