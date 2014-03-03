@@ -1,6 +1,6 @@
 baseurl: /starter
 permalink: pretty
-markdown: maruku
+markdown: redcarpet
 markdown_ext:  markdown,mkdown,mkdn,mkd,md
 textile_ext:   textile
 excerpt_separator: "\n\n"
