@@ -43,23 +43,24 @@ title: 'Jenesis: Distributed Unit Testing Foundation'
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer" style="padding: 10px 0px 10px 0px; background-color: #333; border-top: 0px;">
-      <div id="main_wrap" style="width: 800px; margin: 0 auto;">
-      <section id="main_content" class="inner" style="background-color: #FFFFFF; padding: 20px 40px 40px 50px; border-radius: 15px; border-radius: 15px; float: left; width: 590px;">
-        {{content}}
-      </section>
+      <div id="main_wrap" style="width: 800px; margin: 0 auto; display: flex; padding-bottom: 30px;">
+        <section id="main_content" class="inner" style="background-color: #FFFFFF; padding: 10px 20px 40px 20px; border-radius: 15px; width: 540px;">
+          {{content}}
+        </section>
 
-      <div style="float: left; width: 10px;"></div>
+        <div style="width: 10px;"></div>
 
-      <section id="recent_blog_posts" class="inner" style="background-color: #FFFFFF; border-radius: 15px; border-radius: 15px; width: 200px">
-       <ul>
-        {% for item in site.categories.blog limit:10 %}
-          <li>
-            <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a> <span class='date'>({{item.date | date:"%Y %m %d"}})</span>
-          </li>
-        {% endfor %}
-        </ul>
-        {% include rss-link.html %}
-      </section>
+        <section id="recent_blog_posts" class="inner" style="background-color: #FFFFFF; border-radius: 15px; width: 200px">
+         <ul>
+          {% for item in site.categories.blog limit:10 %}
+            <li>
+              <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a> <span class='date'>({{item.date | date:"%Y %m %d"}})</span>
+            </li>
+          {% endfor %}
+          </ul>
+          {% include rss-link.html %}
+        </section>
+      </div>
     </div>
 
     <!-- FOOTER  -->
