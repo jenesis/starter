@@ -139,7 +139,7 @@ or editing the [wiki](https://github.com/noctarius/jenesis/wiki).
 This API is not meant to be a fully thought-through thing it is more like a basic idea on how such
 stuff could look like:
 
-```
+```java
 @RemoteAgent(agentClass = LoggingRemoteAgent.class)
 public class DistributedExmapleTestCase {
  
@@ -192,5 +192,4 @@ public class LoggingRemoteAgent extends RemoteAgent {
 
  // ... further phases
 }
-
 ```
