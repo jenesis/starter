@@ -1,14 +1,24 @@
 baseurl: /starter
 permalink: pretty
 markdown: kramdown
-  markdown_ext:  markdown,mkdown,mkdn,mkd,md
-  textile_ext:   textile
-  excerpt_separator: "\n\n"
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+textile_ext:   textile
+excerpt_separator: "\n\n"
 kramdown:
   input: GFM
-  use_coderay: true
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+
   coderay:
-    coderay_line_numbers: table
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
     coderay_css: style
 prose:
   rooturl: '_posts'
