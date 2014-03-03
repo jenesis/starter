@@ -1,15 +1,12 @@
 baseurl: /starter
 permalink: pretty
-markdown: rdiscount
-rdiscount:
-  extensions:
-    - autolink
-    - footnotes
-    - smart
-pygments: false 
+markdown: kramdown
 kramdown:
   input: GFM
-  coderay_css: style
+  use_coderay: true
+  coderay:
+    coderay_line_numbers: table
+    coderay_css: style
 prose:
   rooturl: '_posts'
   siteurl: 'http://www.jenesis.io/starter/'
