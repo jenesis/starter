@@ -1,6 +1,12 @@
 baseurl: /starter
 permalink: pretty
-markdown: kramdown
+markdown: rdiscount
+rdiscount:
+  extensions:
+    - autolink
+    - footnotes
+    - smart
+pygments: false 
 kramdown:
   input: GFM
   coderay_css: style
