@@ -1,6 +1,7 @@
 baseurl: /starter
 permalink: pretty
 markdown: kramdown
+kramdown:
   input: GFM
 prose:
   rooturl: '_posts'
