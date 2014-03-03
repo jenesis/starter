@@ -3,6 +3,7 @@ permalink: pretty
 markdown: kramdown
 kramdown:
   input: GFM
+  coderay_css: style
 prose:
   rooturl: '_posts'
   siteurl: 'http://www.jenesis.io/starter/'
