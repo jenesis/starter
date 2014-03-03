@@ -47,8 +47,8 @@ title: 'Jenesis: Distributed Unit Testing Foundation'
         {{content}}
       </section>
     </div>
-    <div id="recent_blog_posts_wrap" class="outer" style="">
-      <section id="recent_blog_posts" class="inner">
+    <div id="recent_blog_posts_wrap" class="outer" style="padding: 10px 0px 10px 0px; background-color: #333; border-top: 0px;">
+      <section id="recent_blog_posts" class="inner" style="background-color: #FFFFFF; padding: 20px 40px 40px 50px; border-radius: 15px; border-radius: 15px;">
         {% for item in site.categories.blog limit:10 %}
           {% capture date %}{{ item.date | date: '%B %Y' }}{% endcapture %}
           {% capture ndate %}{{ item.next.date | date: '%B %Y' }}{% endcapture %}
