@@ -146,12 +146,15 @@ public class DistributedExmapleTestCase {
  @Test(timeout = 60000)
  @RemoteTest(initialForks = 5, identification = "Node-${forkId}")
  public void testDistributed(RemoteContext remoteContext) {
-    RemoteProcess remoteProcess = remoteContext.forkProcess(); // Using defaults from this JVM
+    // Using defaults from this JVM
+    RemoteProcess remoteProcess = remoteContext.forkProcess();
     remoteProcess.waitForStartup(10, TimeUnit.SECONDS);
 
-    remoteContext.sendAction(new SomeRemoteAction(), 10); // To all processes
+    // To all processes
+    remoteContext.sendAction(new SomeRemoteAction(), 10); 
 
-    remoteProcess.sigkill(); // Kill hard  
+    // Kill hard  
+    remoteProcess.sigkill(); 
 
     // ...
  }
@@ -176,17 +179,21 @@ public class SomeRemoteAction extends SynchronousRemoteAction<Void> {
 
 public class LoggingRemoteAgent extends RemoteAgent {
  
- private final Logger logger = LoggerFactory.getLogger(LoggingRemoteAgent.class);
+ private final Logger logger = LoggerFactory.getLogger(...);
 
  @Override
  public void preparationPhase(ExecutionContext executionContext) {
-    logger.info("Preparation phase started: " + executionContext.getIdentification());
+    logger.info("Preparation phase started: " 
+        + executionContext.getIdentification());
     super.preparationPhase(executionContext);
  }
 
  @Override
- public List<Dependency> resolveDependencyPhase(ExecutionContext executionContext) {
-    logger.info("Resolving dependencies: " + executionContext.getIdentification());
+ public List<Dependency> resolveDependencyPhase(
+        ExecutionContext executionContext) {
+
+    logger.info("Resolving dependencies: " 
+        + executionContext.getIdentification());
     return super.resolveDependencyPhase(executionContext);
  }
 
