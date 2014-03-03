@@ -53,8 +53,7 @@ title: 'Jenesis: Distributed Unit Testing Foundation'
        <ul>
         {% for item in site.categories.blog limit:10 %}
           <li>
-            <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a><br/>
-              <span class='date'>&nbsp;&nbsp;&nbsp;&nbsp;{{item.date | date:"%Y %B %d"}}</span>
+            <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a> <span class='date'>({{item.date | date:"%Y %m %d"}})</span>
           </li>
         {% endfor %}
         </ul>
